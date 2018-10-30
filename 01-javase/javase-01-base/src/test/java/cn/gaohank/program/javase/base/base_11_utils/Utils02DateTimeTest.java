@@ -20,6 +20,7 @@ public class Utils02DateTimeTest {
     @Test
     public void getPatternDate() {
         assertEquals("2018", Utils02DateTime.getPatternDate("2018-10-10", "yyyy"));
+        assertEquals("20181010", Utils02DateTime.getPatternDate("2018-10-10 12:12:12", "yyyy-MM-dd HH:mm:ss", "yyyyMMdd"));
     }
 
     @Test

@@ -13,6 +13,10 @@ public class Utils02DateTime {
         return DateTime.parse(date, DateTimeFormat.forPattern(pattern)).getMillis();
     }
 
+    public static String getPatternDate(String date, String srcPattern, String dstPattern) {
+        return DateTime.parse(date, DateTimeFormat.forPattern(srcPattern)).toString(DateTimeFormat.forPattern(dstPattern));
+    }
+
     // 将当前时间格式化成pattern的形式输出
     public static String getPatternDate(String pattern) {
         return DateTime.now().toString(DateTimeFormat.forPattern(pattern));
