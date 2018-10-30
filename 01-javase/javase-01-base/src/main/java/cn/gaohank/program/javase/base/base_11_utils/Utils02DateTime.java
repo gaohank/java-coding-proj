@@ -5,6 +5,10 @@ import org.joda.time.format.DateTimeFormat;
 
 public class Utils02DateTime {
     // 将Date格式化成unix时间戳
+    public static long getMillis(String date) {
+        return DateTime.parse(date).getMillis();
+    }
+
     public static long getMillis(String date, String pattern) {
         return DateTime.parse(date, DateTimeFormat.forPattern(pattern)).getMillis();
     }
