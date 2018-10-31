@@ -17,4 +17,8 @@ public class Utils05Timer {
     public static void startTimer(TimerTask timerTask, long delay, long period) {
         new Timer().schedule(timerTask, delay, period);
     }
+
+    public static void cancelTimer(Timer timer) {
+        timer.cancel();
+    }
 }
