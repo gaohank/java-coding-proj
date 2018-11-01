@@ -26,4 +26,12 @@ public class Utils07ScannerTest {
         Scanner scanner = Utils07Scanner.getScanner(new ByteArrayInputStream(data.getBytes()));
         Utils07Scanner.scanByte(scanner);
     }
+
+    @Test
+    public void scanDouble() {
+        byte[] ranks = {Double.valueOf(1.24).byteValue(), Double.valueOf(3.14).byteValue()};
+
+        Scanner scanner = Utils07Scanner.getScanner(new ByteArrayInputStream(ranks));
+        Utils07Scanner.scanDouble(scanner);
+    }
 }

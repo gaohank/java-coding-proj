@@ -25,4 +25,10 @@ public class Utils07Scanner {
             System.out.println(scanner.nextByte());
         }
     }
+
+    public static void scanDouble(Scanner scanner) {
+        while (scanner.hasNextDouble()) {
+            System.out.println(scanner.nextDouble());
+        }
+    }
 }
