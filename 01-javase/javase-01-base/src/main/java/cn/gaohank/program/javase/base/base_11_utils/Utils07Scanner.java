@@ -22,7 +22,7 @@ public class Utils07Scanner {
 
     public static void scanByte(Scanner scanner) {
         while (scanner.hasNextByte()) {
-            System.out.println(scanner.nextByte());
+            System.out.println(scanner.nextByte(7));
         }
     }
 

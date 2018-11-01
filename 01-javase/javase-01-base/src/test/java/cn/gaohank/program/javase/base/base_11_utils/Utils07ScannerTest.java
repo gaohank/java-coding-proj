@@ -22,16 +22,13 @@ public class Utils07ScannerTest {
 
     @Test
     public void scanByte() {
-        String data = "hello world";
-        Scanner scanner = Utils07Scanner.getScanner(new ByteArrayInputStream(data.getBytes()));
+        Scanner scanner = new Scanner("h n hello world 1 2 3");
         Utils07Scanner.scanByte(scanner);
     }
 
     @Test
     public void scanDouble() {
-        byte[] ranks = {Double.valueOf(1.24).byteValue(), Double.valueOf(3.14).byteValue()};
-
-        Scanner scanner = Utils07Scanner.getScanner(new ByteArrayInputStream(ranks));
+        Scanner scanner = new Scanner("3.14 1.24");
         Utils07Scanner.scanDouble(scanner);
     }
 }
