@@ -4,9 +4,14 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Utils10Pair {
+    public static<T, R> List<Pair<T, R>> getPairs(Pair<T, R> ... pairs) {
+        return new ArrayList<>(Arrays.asList(pairs));
+    }
+
     public static void main(String[] args) {
         Pair<String, String> stu1 = new ImmutablePair<>("1", "hank");
         Pair<String, String> stu2 = new ImmutablePair<>("1", "bob");
