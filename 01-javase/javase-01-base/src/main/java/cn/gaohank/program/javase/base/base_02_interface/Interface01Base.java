@@ -8,7 +8,7 @@ package cn.gaohank.program.javase.base.base_02_interface;
  * 4.继承是单继承，接口可以多实现
  */
 public interface Interface01Base {
-    // 接口中变量可以通过（接口名.变量名）使用，默认权限
+    // 接口中变量可以通过（接口名.变量名）使用
     String DISCRIPTION = "介绍接口基础特性";
 
     // 可以省略关键字display
