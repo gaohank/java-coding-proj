@@ -13,6 +13,15 @@ package cn.gaohank.program.javase.base.base_03_class;
  * 子类必须实现抽象父类的所有抽象方法，才算完整，才能new,除非这个子类也是抽象类
  * abstract和final不能同时修饰一个类
  */
+
+/*
+ * 不加任何访问权限限定的成员采用的是默认的访问权限，称为default或package。
+ * default权限意味着可以被这个类本身和同一个包的类访问。
+ * 在其他包中定义的类，即使是这个类的子类，也不能直接访问这些成员。
+ * 这种访问权限相当于把同一个包中的类作为可信的朋友。
+ * 对于构造方法，如果不加任何访问权限也是default访问权限，
+ * 除了这个类本身和同一个包中的类之外，其他类不能生成该类的实例
+ */
 public abstract class Class01Abstract {
     static String lastName;
     String name;
