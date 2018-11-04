@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- *     Iterator<----关联----Collection<----继承----List<----实现-----ArrayList
+ *     Iterator<----继承----Collection<----继承----List<----实现-----ArrayList
                                                 |             |
                                                 |               -----LinkedList
                                                 |
