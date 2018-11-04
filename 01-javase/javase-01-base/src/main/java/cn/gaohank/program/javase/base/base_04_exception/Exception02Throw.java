@@ -1,0 +1,16 @@
+package cn.gaohank.program.javase.base.base_04_exception;
+
+public class Exception02Throw extends Exception {
+    Exception02Throw() {
+    }
+
+    private Exception02Throw(String message) {
+        super(message);
+    }
+
+    public void throwException(String str) throws Exception02Throw {
+        if (str == null) {
+            throw new Exception02Throw("参数为null异常");
+        }
+    }
+}
