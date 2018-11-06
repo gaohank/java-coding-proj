@@ -13,4 +13,10 @@ public class Exception02Throw extends Exception {
             throw new Exception02Throw("参数为null异常");
         }
     }
+
+    public void throwRException(String str) {
+        if (str == null) {
+            throw new RuntimeException("Exception02Throw RuntimeException");
+        }
+    }
 }
