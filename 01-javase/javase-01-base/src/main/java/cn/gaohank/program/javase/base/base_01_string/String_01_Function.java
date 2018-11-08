@@ -2,7 +2,10 @@ package cn.gaohank.program.javase.base.base_01_string;
 
 public class String_01_Function {
     public static void main(String[] args) {
-        String name = " gao song ling ";
+        String name = "gao song ling";
+
+        System.out.println(name.indexOf(" "));
+        System.out.println(name.substring(0, name.indexOf(" ")));
 
         System.out.println(name);
         System.out.println(name.equals("helo"));
