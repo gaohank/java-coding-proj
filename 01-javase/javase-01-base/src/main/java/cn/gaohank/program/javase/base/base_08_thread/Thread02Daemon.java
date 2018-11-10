@@ -4,7 +4,8 @@ public class Thread02Daemon {
     public static void main(String[] args) throws Exception {
         Thread daemon = new Thread(() -> {
             System.out.println("守护线程开始");
-//            while (true);
+            // 设置为守护线程时，最终会退出，主程序结束
+            while (true);
         });
 
         daemon.setDaemon(true);
@@ -15,9 +16,8 @@ public class Thread02Daemon {
                 System.out.println("thread t2");
             }
             System.out.println(daemon.getState());
+//            while(true); 非守护线程，程序不会退出，主程序不会结束
         }).start();
-
-        Thread.sleep(2000);
 
         System.out.println(daemon.getState());
     }
