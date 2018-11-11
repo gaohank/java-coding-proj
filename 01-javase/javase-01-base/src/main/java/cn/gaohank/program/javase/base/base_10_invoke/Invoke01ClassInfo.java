@@ -39,5 +39,9 @@ public class Invoke01ClassInfo {
         System.out.println(Arrays.toString(stuClass.getConstructors()));
         System.out.println("获得多个构造方法，包括private");
         System.out.println(Arrays.toString(stuClass.getDeclaredConstructors()));
+
+        System.out.println("获得某个构造方法");
+        Constructor<? extends Student> constructor = stuClass.getConstructor(Integer.TYPE, Integer.TYPE, String.class);
+        System.out.println(constructor);
     }
 }
