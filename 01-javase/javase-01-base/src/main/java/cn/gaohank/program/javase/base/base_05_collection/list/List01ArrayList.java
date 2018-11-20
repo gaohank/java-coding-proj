@@ -2,6 +2,8 @@ package cn.gaohank.program.javase.base.base_05_collection.list;
 
 import com.sun.istack.internal.NotNull;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -30,5 +32,11 @@ public class List01ArrayList {
     public static List<String> getSort(List<String> list) {
         list.sort(Comparator.comparingInt(l -> l.charAt(0)));
         return list;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        list.sort((x, y) -> y - x);
+        System.out.println(list.toString());
     }
 }
