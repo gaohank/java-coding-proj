@@ -1,8 +1,5 @@
 package cn.gaohank.program.javase.base.base_05_collection.list;
 
-import com.sun.istack.internal.NotNull;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -21,7 +18,7 @@ public class List01ArrayList {
      * 5.subList 取子列表
      */
 
-    public static <T> int getIndex(@NotNull List<T> list, T value) {
+    public static <T> int getIndex(List<T> list, T value) {
         return list.indexOf(value);
     }
 
