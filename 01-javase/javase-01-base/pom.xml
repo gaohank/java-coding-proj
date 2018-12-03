@@ -47,6 +47,15 @@
     </dependencies>
 
     <build>
+        <!--  设置resources的路径 -->
+        <resources>
+            <resource>
+                <directory>
+                    ${project.basedir}/src/resource
+                </directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <!-- 执行测试用例的插件，mvn test -->
             <plugin>
