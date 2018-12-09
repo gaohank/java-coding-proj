@@ -32,8 +32,10 @@ public class List01ArrayList {
     }
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        List<Integer> list = Arrays.asList(1, 2, 4, 3);
         list.sort((x, y) -> y - x);
+        System.out.println(list.toString());
+        list.sort(Comparator.comparingInt(x -> x));
         System.out.println(list.toString());
     }
 }
