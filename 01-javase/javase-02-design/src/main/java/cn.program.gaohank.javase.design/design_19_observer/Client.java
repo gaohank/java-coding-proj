@@ -1,4 +1,4 @@
-package com.java.design_19_observer;
+package cn.program.gaohank.javase.design.design_19_observer;
 
 public class Client {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.java.design_08_composite;
+package cn.program.gaohank.javase.design.design_08_composite;
 
 import java.util.ArrayList;
 

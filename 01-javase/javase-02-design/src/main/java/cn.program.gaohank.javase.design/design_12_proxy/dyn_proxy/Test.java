@@ -1,4 +1,4 @@
-package com.java.design_12_proxy.dyn_proxy;
+package cn.program.gaohank.javase.design.design_12_proxy.dyn_proxy;
 
 import java.lang.reflect.Proxy;
 

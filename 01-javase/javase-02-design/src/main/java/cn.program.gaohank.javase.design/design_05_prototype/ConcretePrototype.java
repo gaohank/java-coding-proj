@@ -1,4 +1,4 @@
-package com.java.design_05_prototype;
+package cn.program.gaohank.javase.design.design_05_prototype;
 
 public class ConcretePrototype extends Prototype {
 	public ConcretePrototype(String name) {

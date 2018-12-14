@@ -1,4 +1,4 @@
-package com.java.design_06_adapter;
+package cn.program.gaohank.javase.design.design_06_adapter;
 
 /*
  * Adaptee

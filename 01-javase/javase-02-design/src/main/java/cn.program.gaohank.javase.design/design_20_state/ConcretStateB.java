@@ -1,4 +1,4 @@
-package com.java.design_20_state;
+package cn.program.gaohank.javase.design.design_20_state;
 
 public class ConcretStateB implements State {
 

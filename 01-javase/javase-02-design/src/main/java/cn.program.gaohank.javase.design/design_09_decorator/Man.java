@@ -1,4 +1,4 @@
-package com.java.design_09_decorator;
+package cn.program.gaohank.javase.design.design_09_decorator;
 
 public class Man implements Person {
 

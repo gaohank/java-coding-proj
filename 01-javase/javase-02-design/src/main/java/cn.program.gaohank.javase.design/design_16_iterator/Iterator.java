@@ -1,4 +1,4 @@
-package com.java.design_16_iterator;
+package cn.program.gaohank.javase.design.design_16_iterator;
 
 public interface Iterator {
 	Object next();

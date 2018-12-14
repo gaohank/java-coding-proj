@@ -1,4 +1,4 @@
-package com.java.design_01_factory;
+package cn.program.gaohank.javase.design.design_01_factory;
 
 public class TeacherWork implements Work {
 

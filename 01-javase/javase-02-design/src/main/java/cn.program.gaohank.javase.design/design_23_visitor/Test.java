@@ -1,4 +1,4 @@
-package com.java.design_23_visitor;
+package cn.program.gaohank.javase.design.design_23_visitor;
 
 /**
  * 本代码出自博客：http://blog.csdn.net/zhangerqing 

@@ -1,4 +1,4 @@
-package com.java.design_04_singleton;
+package cn.program.gaohank.javase.design.design_04_singleton;
 
 public class Test {
 	public static void main(String[] args) {

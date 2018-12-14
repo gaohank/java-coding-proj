@@ -1,4 +1,4 @@
-package com.java.design_22_template;
+package cn.program.gaohank.javase.design.design_22_template;
 public class TemplateConcrete extends Template {
 
     @Override

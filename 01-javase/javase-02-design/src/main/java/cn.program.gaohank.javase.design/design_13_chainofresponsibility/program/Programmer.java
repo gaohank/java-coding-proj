@@ -1,4 +1,4 @@
-package com.java.design_13_chainofresponsibility.program;
+package cn.program.gaohank.javase.design.design_13_chainofresponsibility.program;
 
 public class Programmer implements Chain {
 	private Chain nextChain = null;

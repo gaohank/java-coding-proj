@@ -1,4 +1,4 @@
-package com.java.design_17_mediator;
+package cn.program.gaohank.javase.design.design_17_mediator;
 
 public class ConcreteMediator extends Mediator {
 

@@ -1,4 +1,4 @@
-package com.java.design_10_facade;
+package cn.program.gaohank.javase.design.design_10_facade;
 
 public class Test {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.java.design_21_strategy;
+package cn.program.gaohank.javase.design.design_21_strategy;
 
 public class Client {
 	public static void main(String[] args) {

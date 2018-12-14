@@ -1,4 +1,4 @@
-package com.java.design_20_state;
+package cn.program.gaohank.javase.design.design_20_state;
 
 /**
  * 状态模式的切换类   2012-12-1

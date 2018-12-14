@@ -1,4 +1,4 @@
-package com.java.design_23_visitor;
+package cn.program.gaohank.javase.design.design_23_visitor;
 
 public class Memento {
 	

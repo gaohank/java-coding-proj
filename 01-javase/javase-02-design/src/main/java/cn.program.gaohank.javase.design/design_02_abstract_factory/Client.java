@@ -1,4 +1,4 @@
-package com.java.design_02_abstract_factory;
+package cn.program.gaohank.javase.design.design_02_abstract_factory;
 
 public class Client {
 	public static void main(String[] args) {

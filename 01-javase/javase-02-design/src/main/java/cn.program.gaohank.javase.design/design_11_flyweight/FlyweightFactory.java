@@ -1,4 +1,4 @@
-package com.java.design_11_flyweight;
+package cn.program.gaohank.javase.design.design_11_flyweight;
 
 import java.util.HashMap;
 import java.util.Map;

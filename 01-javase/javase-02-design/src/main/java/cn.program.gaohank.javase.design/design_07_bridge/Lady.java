@@ -1,4 +1,4 @@
-package com.java.design_07_bridge;
+package cn.program.gaohank.javase.design.design_07_bridge;
 
 public class Lady extends Person {
 

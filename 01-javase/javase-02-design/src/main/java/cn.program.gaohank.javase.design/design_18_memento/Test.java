@@ -1,4 +1,4 @@
-package com.java.design_18_memento;
+package cn.program.gaohank.javase.design.design_18_memento;
 
 /**
  * 本代码出自博客：http://blog.csdn.net/zhangerqing 

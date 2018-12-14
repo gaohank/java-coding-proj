@@ -1,4 +1,4 @@
-package com.java.design_21_strategy;
+package cn.program.gaohank.javase.design.design_21_strategy;
 
 /*
  * 负责和具体的策略类交互

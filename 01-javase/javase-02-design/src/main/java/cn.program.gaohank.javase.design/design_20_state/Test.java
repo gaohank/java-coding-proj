@@ -1,4 +1,4 @@
-package com.java.design_20_state;
+package cn.program.gaohank.javase.design.design_20_state;
 
 /**
  * 本代码出自博客：http://blog.csdn.net/zhangerqing 

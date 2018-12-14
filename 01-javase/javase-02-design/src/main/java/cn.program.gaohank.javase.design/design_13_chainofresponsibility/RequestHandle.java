@@ -1,4 +1,4 @@
-package com.java.design_13_chainofresponsibility;
+package cn.program.gaohank.javase.design.design_13_chainofresponsibility;
 
 /**
  * 包括用户提交请求的处理接口
