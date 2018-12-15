@@ -12,6 +12,7 @@
     <artifactId>servlet-01-base</artifactId>
 
     <packaging>war</packaging>
+    <url>http://maven.apache.org</url>
 
     <dependencies>
         <dependency>
