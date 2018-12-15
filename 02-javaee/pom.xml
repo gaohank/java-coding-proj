@@ -13,7 +13,6 @@
     <version>1.0</version>
     <modules>
         <module>javaee-01-servlet</module>
-        <module>javaee-01-servlet</module>
         <module>javaee-02-spring</module>
     </modules>
     <packaging>pom</packaging>

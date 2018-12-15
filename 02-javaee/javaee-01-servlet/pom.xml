@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>servlet-01-base</module>
-        <module>../javaee-02-jsp</module>
         <module>servlet-02-jsp</module>
     </modules>
 
