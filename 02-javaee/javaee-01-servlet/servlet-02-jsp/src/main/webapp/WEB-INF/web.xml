@@ -10,79 +10,75 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <servlet-name>Charset_01_Post</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_01_character.Charset_01_Post</servlet-class>
+    <servlet-name>01_grammer</servlet-name>
+    <servlet-class>cn.gaohank.program._01_grammar.Grammar_01_Jsp</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Charset_01_Post</servlet-name>
-    <url-pattern>/post charset</url-pattern>
+    <servlet-name>01_grammer</servlet-name>
+    <url-pattern>/grammar</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Charset_01_get</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_01_character.Charset_02_Get</servlet-class>
+    <servlet-name>cookie_01_set</servlet-name>
+    <servlet-class>cn.gaohank.program._02_cookie.Cookie_01_Set</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Charset_01_get</servlet-name>
-    <url-pattern>/get charset</url-pattern>
+    <servlet-name>cookie_01_set</servlet-name>
+    <url-pattern>/cookie set</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Request_01_OneParam</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_02_request.Request_01_OneParam</servlet-class>
+    <servlet-name>cookie_02_get</servlet-name>
+    <servlet-class>cn.gaohank.program._02_cookie.Cookie_02_Get</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Request_01_OneParam</servlet-name>
-    <url-pattern>/request one parameter</url-pattern>
+    <servlet-name>cookie_02_get</servlet-name>
+    <url-pattern>/cookie get</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Request_02_Array</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_02_request.Request_02_Array</servlet-class>
+    <servlet-name>cookie_03_change</servlet-name>
+    <servlet-class>cn.gaohank.program._02_cookie.Cookie_03_Change</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Request_02_Array</servlet-name>
-    <url-pattern>/request array</url-pattern>
+    <servlet-name>cookie_03_change</servlet-name>
+    <url-pattern>/cookie change</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Jdbc_01_Demo</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_03_jdbc.Jdbc_01_Demo</servlet-class>
+    <servlet-name>session_01_set</servlet-name>
+    <servlet-class>cn.gaohank.program._03_session.Session_01_Set</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Jdbc_01_Demo</servlet-name>
-    <url-pattern>/jdbc</url-pattern>
+    <servlet-name>session_01_set</servlet-name>
+    <url-pattern>/session set</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Redirect_01_Demo</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_04_redirect.Redirect_01_Demo</servlet-class>
+    <servlet-name>session_02_get</servlet-name>
+    <servlet-class>cn.gaohank.program._03_session.Session_02_Get</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Redirect_01_Demo</servlet-name>
-    <url-pattern>/redirect</url-pattern>
+    <servlet-name>session_02_get</servlet-name>
+    <url-pattern>/session get</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Combine_01_Demo</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_05_combine.Combine_01_Demo</servlet-class>
+    <servlet-name>filter_01_func</servlet-name>
+    <servlet-class>cn.gaohank.program._04_filter.Filter_01_Func</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Combine_01_Demo</servlet-name>
-    <url-pattern>*.combine</url-pattern>
+    <servlet-name>filter_01_func</servlet-name>
+    <url-pattern>/filter</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Lifecycle_01_Demo</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_06_lifecycle.Lifecycle_01_Demo</servlet-class>
-    <init-param>
-      <param-name>myDebug</param-name>
-      <param-value>&quot;你好中国&quot;</param-value>
-    </init-param>
+    <servlet-name>listener_01_http</servlet-name>
+    <servlet-class>cn.gaohank.program._05_listener.Listener_01_Http</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Lifecycle_01_Demo</servlet-name>
-    <url-pattern>/lifecycle</url-pattern>
+    <servlet-name>listener_01_http</servlet-name>
+    <url-pattern>/listener</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Thread_01_Tickets</servlet-name>
-    <servlet-class>cn.gaohank.program.j2ee.servlet.base.servlet_base_08_thread.Thread_01_Tickets</servlet-class>
+    <servlet-name>el_01_grammar</servlet-name>
+    <servlet-class>cn.gaohank.program._06_el.EL_01_Grammar</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Thread_01_Tickets</servlet-name>
-    <url-pattern>/thread</url-pattern>
+    <servlet-name>el_01_grammar</servlet-name>
+    <url-pattern>/el</url-pattern>
   </servlet-mapping>
 </web-app>
