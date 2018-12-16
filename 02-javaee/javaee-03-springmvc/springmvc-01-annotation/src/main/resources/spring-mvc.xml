@@ -24,7 +24,7 @@
     <!-- 扫描所有/com目录下的java文件，如果扫描到spring相关的注解类
                   则把这些类注册为spring的bean
      -->
-    <context:component-scan base-package="com"/>
+    <context:component-scan base-package="cn.gaohank.program.springmvc.annotation"/>
     
     <!--开启MVC注解扫描 -->
     <!-- 配置annotation类型的处理映射器，根据请求查找映射 -->
