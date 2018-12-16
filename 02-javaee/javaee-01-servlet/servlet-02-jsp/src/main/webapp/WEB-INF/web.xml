@@ -59,7 +59,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>filter_01_func</servlet-name>
-    <servlet-class>cn.gaohank.program._04_filter.Filter_01_Func</servlet-class>
+    <servlet-class>cn.gaohank.program._04_filter.Filter_02_Servlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>filter_01_func</servlet-name>
@@ -67,7 +67,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>listener_01_http</servlet-name>
-    <servlet-class>cn.gaohank.program._05_listener.Listener_01_Http</servlet-class>
+    <servlet-class>cn.gaohank.program._05_listener.Listener_02_Servlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>listener_01_http</servlet-name>
@@ -83,7 +83,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>jstl_01_demo</servlet-name>
-    <servlet-class>cn.gaohank.program._07_jstl</servlet-class>
+    <servlet-class>cn.gaohank.program._07_jstl.JSTL_01_Demo</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>jstl_01_demo</servlet-name>
@@ -91,7 +91,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>jquery_01_demo</servlet-name>
-    <servlet-class>cn.gaohank.program._09_jQuary</servlet-class>
+    <servlet-class>cn.gaohank.program._09_jQuary.JQuary_01_Demo</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>jquery_01_demo</servlet-name>
@@ -99,7 +99,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>json_01_demo</servlet-name>
-    <servlet-class>cn.gaohank.program._10_json</servlet-class>
+    <servlet-class>cn.gaohank.program._10_json.JSON_01_Demo</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>json_01_demo</servlet-name>
