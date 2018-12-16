@@ -81,4 +81,28 @@
     <servlet-name>el_01_grammar</servlet-name>
     <url-pattern>/el</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>jstl_01_demo</servlet-name>
+    <servlet-class>cn.gaohank.program._07_jstl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jstl_01_demo</servlet-name>
+    <url-pattern>/jstl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>jquery_01_demo</servlet-name>
+    <servlet-class>cn.gaohank.program._09_jQuary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jquery_01_demo</servlet-name>
+    <url-pattern>/jQuary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>json_01_demo</servlet-name>
+    <servlet-class>cn.gaohank.program._10_json</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>json_01_demo</servlet-name>
+    <url-pattern>/json</url-pattern>
+  </servlet-mapping>
 </web-app>
