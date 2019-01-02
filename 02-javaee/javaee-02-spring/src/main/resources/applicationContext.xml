@@ -22,7 +22,7 @@
 http://www.springframework.org/schema/data/jpa ">
 
     <bean id="dog" class="spring_01_bean.Dog" scope="prototype"/>
-    <bean id="cat" class="spring_01_bean.Cat" init-method="init"
+    <bean id="cat" class="cn.gaohank.program.spring.spring_01_bean.Cat" init-method="init"
           destroy-method="destroy"
     />
 
