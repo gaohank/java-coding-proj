@@ -150,6 +150,7 @@ public class StudentTest {
         Student s1 = ctx.getBean("student",Student.class);
         Student s2 = ctx.getBean("student",Student.class);
         System.out.println("test....." + (s1==s2));
+        // 两个bean对象指向的是同一个
         System.out.println("test1..." + (s1.getComputer()==s2.getComputer()));
         ctx.close();
     }
