@@ -20,18 +20,18 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-    <!-- 在spring中声明一个类，告诉spring帮我管理 -->
+    <!-- 在spring中声明一个类，由spring管理 -->
     <!-- <bean>元素表示一个类交由spring容器管理 -->
     <!-- id是该实例的唯一标识 class是该实例的全限定类名，spring容器会利用反射创建一个实例 -->
     <!-- <poroperty>标签是该实例的成员变量，name是属性名，value是属性值 -->
-    <bean id="computer" class="spring_02_ioc.Computer">
+    <bean id="computer" class="cn.gaohank.program.spring.spring_02_ioc.Computer">
         <property name="mainboard" value="技嘉"/>
         <property name="hdd" value="希捷"/>
         <property name="ram" value="金士顿"/>
     </bean>
 
     <!-- 注入参数值 -->
-    <bean id="msg" class="spring_02_ioc.MessageBean">
+    <bean id="msg" class="cn.gaohank.program.spring.spring_02_ioc.MessageBean">
         <property name="name">
             <value>张三</value>
         </property>
@@ -57,7 +57,7 @@
             </set>
         </property>
 
-        <!-- setScore -->
+        <!-- 对应mapScores -->
         <property name="score">
             <map>
                 <entry key="aaaa" value="80"/>
@@ -93,7 +93,7 @@
         <prop key="password">123456</prop>
     </util:properties>
     <!-- 采用引用的方式注入集合 -->
-    <bean id="msg2" class="spring_02_ioc.MessageBean">
+    <bean id="msg2" class="cn.gaohank.program.spring.spring_02_ioc.MessageBean">
         <property name="langs" ref="langList"/>
         <property name="cities" ref="citySet"/>
         <property name="score" ref="scoreMap"/>
@@ -104,7 +104,7 @@
     <util:properties id="const" location="classpath:const.properties"/>
 
     <!-- 注入表达式 -->
-    <bean id="demo" class="spring_02_ioc.DemoBean">
+    <bean id="demo" class="cn.gaohank.program.spring.spring_02_ioc.DemoBean">
         <property name="name" value="#{msg.name}"/><!-- #{} -->
         <property name="lang" value="#{msg.langs[0]}"/>
         <property name="score" value="#{msg.score.aaaa}"/>
