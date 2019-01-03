@@ -96,7 +96,8 @@ public class Spring03Test {
         Student stu = ctx.getBean("student", Student.class);
         System.out.println(stu.getComputer());
 
-        // @Value("#{const.PAGE_SIZE}") const已经注册为bean对象
+        // @Value("${}") 这种形式是从配置文件中取值，需要扫描配置文件
+        // @Value("#{const.PAGE_SIZE}") 使用spel表达式，const已经注册为bean对象
         DemoBean demoBean = ctx.getBean("demoBean", DemoBean.class);
         demoBean.execute();
     }

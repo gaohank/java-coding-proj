@@ -23,6 +23,9 @@
     <!-- 声明Properties集合，读取const.properties参数 -->
     <util:properties id="const" location="classpath:const.properties"/>
 
+    <!-- 扫描配置文件，这样可以使用${key}读值 -->
+    <context:property-placeholder location="classpath:const.properties" />
+
     <!-- 开启注解扫描 -->
     <context:component-scan base-package="cn.gaohank.program.spring.spring_03_annotation"/>
 

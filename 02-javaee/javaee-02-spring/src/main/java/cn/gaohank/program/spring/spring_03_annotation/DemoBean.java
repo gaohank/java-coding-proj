@@ -10,6 +10,7 @@ public class DemoBean implements Serializable {
     private String name;
     private String lang;
     private String score;
+    // @Value("${PAGE_SIZE}")
     @Value("#{const.PAGE_SIZE}")
     private int pageSize;
     public void execute() {
