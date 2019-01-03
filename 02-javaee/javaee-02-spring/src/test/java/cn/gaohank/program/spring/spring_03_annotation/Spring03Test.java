@@ -95,5 +95,9 @@ public class Spring03Test {
 
         Student stu = ctx.getBean("student", Student.class);
         System.out.println(stu.getComputer());
+
+        // @Value("#{const.PAGE_SIZE}") const已经注册为bean对象
+        DemoBean demoBean = ctx.getBean("demoBean", DemoBean.class);
+        demoBean.execute();
     }
 }
