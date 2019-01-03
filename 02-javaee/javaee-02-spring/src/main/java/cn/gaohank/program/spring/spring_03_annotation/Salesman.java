@@ -12,8 +12,4 @@ public class Salesman implements Serializable {
     public Computer getComputer() {
         return computer;
     }
-    public void setComputer(Computer computer) {
-        this.computer = computer;
-        System.out.println("Salesman");
-    }
 }
