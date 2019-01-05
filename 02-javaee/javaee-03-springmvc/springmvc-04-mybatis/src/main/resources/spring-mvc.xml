@@ -65,7 +65,7 @@
     <!-- 配置SqlSessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="ds" />
-        <property name="mapperLocations" value="classpath:com/mapper/*.xml" />
+        <property name="mapperLocations" value="classpath:TEmpMapper.xml" />
         <property name="typeAliasesPackage" value="com.domain"/><!-- 设置别名 ，自动把包名去掉，只剩类名eg.Student-->
     </bean>
     
