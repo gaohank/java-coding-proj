@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xmlns:jdbc="http://www.springframework.org/schema/jdbc"  
+    xmlns:jee="http://www.springframework.org/schema/jee" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+    
+	<util:properties id="jdbc" location="classpath:db.properties"/>
+    
+    <!-- 定义数据源 -->
+    <bean id="ds" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    	<property name = "url" value="#{jdbc.url}"/>
+    	<property name = "driverClassName" value="#{jdbc.driver}"/>
+    	<property name = "username" value="#{jdbc.user}"/>
+    	<property name = "password" value="#{jdbc.pwd}"/>
+    </bean>
+
+    <!--
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${jdbc.url}" />
+        <property name="driverClass" value="${jdbc.driverClassName}" />
+        <property name="user" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />      
+    </bean>
+    -->
+    
+    <!-- 开启注解扫描 -->
+    <context:component-scan base-package="com"/>
+
+	<!-- 开启MVC注解扫描 -->
+    <mvc:annotation-driven/>
+    
+    <!--定义视图解析器ViewResolver -->
+    <bean id="viewResolver"
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    
+    <!-- 事务管理器 -->  
+    <bean id="transactionManager"  
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+        <property name="dataSource" ref="ds" />  
+    </bean> 
+    
+    <tx:annotation-driven transaction-manager="transactionManager" />
+   
+    <!-- 配置SqlSessionFactory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="ds" />
+        <property name="mapperLocations" value="classpath:com/mapper/*.xml" />
+        <property name="typeAliasesPackage" value="com.domain"/><!-- 设置别名 ，自动把包名去掉，只剩类名eg.Student-->
+    </bean>
+    
+    <!-- 配置MyBatis注解 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.dao" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>  <!-- 跟工厂连上了，也让dao和xml连上了 -->
+    </bean>
+    
+</beans>
