@@ -15,6 +15,7 @@
         <module>springmvc-01-annotation</module>
         <module>springmvc-02-filter</module>
         <module>springmvc-03-aop</module>
+        <module>springmvc-04-mybatis</module>
     </modules>
 
 
