@@ -15,8 +15,8 @@ import com.domain.TEmp;
 public class EmpService {
 
 	@Resource
-	private TEmpDao tEmpDao;//×¢ÈëTEmpDao
-	
+	private TEmpDao tEmpDao;//æ³¨å…¥TEmpDao
+
 	public Map<String, List<TEmp>> findAll() {
 		List<TEmp> list = tEmpDao.findAll();
 		Map<String,List<TEmp>> data = new HashMap<String,List<TEmp>>();
@@ -25,7 +25,7 @@ public class EmpService {
 	}
 
 	public void addEmp(TEmp emp) {
-		tEmpDao.insertSelective(emp);	
+		tEmpDao.insertSelective(emp);
 	}
 
 	public void deleteEmp(Integer empno) {

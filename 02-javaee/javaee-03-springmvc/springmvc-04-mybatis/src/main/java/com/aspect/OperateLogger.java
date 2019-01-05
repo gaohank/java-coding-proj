@@ -14,57 +14,57 @@ import org.springframework.stereotype.Component;
 
 
 /**
- *    ÓÃÓÚ¼ÇÂ¼ÈÕÖ¾µÄ·½Ãæ×é¼þ£¬ÑÝÊ¾Spring AOPµÄ¸÷ÖÖÍ¨ÖªÀàÐÍ¡£
+ *    ç”¨äºŽè®°å½•æ—¥å¿—çš„æ–¹é¢ç»„ä»¶ï¼Œæ¼”ç¤ºSpring AOPçš„å„ç§é€šçŸ¥ç±»åž‹ã€‚
  */
 
 @Component
 @Aspect
 public class OperateLogger {
     /**
-     * Ç°ÖÃÍ¨Öª¡¢ºóÖÃÍ¨Öª¡¢×îÖÕÍ¨ÖªÊ¹ÓÃµÄ·½·¨
+     * å‰ç½®é€šçŸ¥ã€åŽç½®é€šçŸ¥ã€æœ€ç»ˆé€šçŸ¥ä½¿ç”¨çš„æ–¹æ³•
      */
-	//@Before("within(com.controller..*)")
+    //@Before("within(com.controller..*)")
 	/*@After("within(com.controller..*)")
 	//@AfterReturning("within(com.controller..*)")
     public void log1() {
-        // ¼ÇÂ¼ÈÕÖ¾
-        System.out.println("-->¼ÇÂ¼ÓÃ»§²Ù×÷ÐÅÏ¢");
+        // è®°å½•æ—¥å¿—
+        System.out.println("-->è®°å½•ç”¨æˆ·æ“ä½œä¿¡æ¯");
     }*/
-    
+
     /**
-     * »·ÈÆÍ¨ÖªÊ¹ÓÃµÄ·½·¨
+     * çŽ¯ç»•é€šçŸ¥ä½¿ç”¨çš„æ–¹æ³•
      */
-	@Around("within(com.controller..*)")
+    @Around("within(com.controller..*)")
     public Object log2(ProceedingJoinPoint p) throws Throwable {
-        // Ä¿±ê×é¼þµÄÀàÃû
+        // ç›®æ ‡ç»„ä»¶çš„ç±»å
         String className = p.getTarget().getClass().getName();
-        // µ÷ÓÃµÄ·½·¨Ãû
+        // è°ƒç”¨çš„æ–¹æ³•å
         String method = p.getSignature().getName();
-        // µ±Ç°ÏµÍ³Ê±¼ä
+        // å½“å‰ç³»ç»Ÿæ—¶é—´
         String date = new SimpleDateFormat(
                 "yyyy-MM-dd hh:mm:ss").format(new Date());
-        // Æ´ÈÕÖ¾ÐÅÏ¢
-        String msg = "-->ÓÃ»§ÔÚ" + date + "£¬Ö´ÐÐÁË" 
+        // æ‹¼æ—¥å¿—ä¿¡æ¯
+        String msg = "-->ç”¨æˆ·åœ¨" + date + "ï¼Œæ‰§è¡Œäº†"
                 + className + "." + method + "()";
-        // ¼ÇÂ¼ÈÕÖ¾
-        System.out.println(msg);        
-        
-        // Ö´ÐÐÄ¿±ê×é¼þµÄ·½·¨
+        // è®°å½•æ—¥å¿—
+        System.out.println(msg);
+
+        // æ‰§è¡Œç›®æ ‡ç»„ä»¶çš„æ–¹æ³•
         Object obj = p.proceed();
-        
-        // ÔÚµ÷ÓÃÄ¿±ê×é¼þÒµÎñ·½·¨ºóÒ²¿ÉÒÔ×öÒ»Ð©ÒµÎñ´¦Àí
-        System.out.println("-->µ÷ÓÃÄ¿±ê×é¼þÒµÎñ·½·¨½áÊø...");
-        
+
+        // åœ¨è°ƒç”¨ç›®æ ‡ç»„ä»¶ä¸šåŠ¡æ–¹æ³•åŽä¹Ÿå¯ä»¥åšä¸€äº›ä¸šåŠ¡å¤„ç†
+        System.out.println("-->è°ƒç”¨ç›®æ ‡ç»„ä»¶ä¸šåŠ¡æ–¹æ³•ç»“æŸ...");
+
         return obj;
     }
-    
+
     /**
-     * Òì³£Í¨ÖªÊ¹ÓÃµÄ·½·¨
+     * å¼‚å¸¸é€šçŸ¥ä½¿ç”¨çš„æ–¹æ³•
      */
-	@AfterThrowing(pointcut="within(com.controller..*)",throwing="e")
+    @AfterThrowing(pointcut="within(com.controller..*)",throwing="e")
     public void log3(Exception e) {
         StackTraceElement[] elems = e.getStackTrace();
-        // ½«Òì³£ÐÅÏ¢¼ÇÂ¼
+        // å°†å¼‚å¸¸ä¿¡æ¯è®°å½•
         System.out.println("-->" + elems[0].toString());
     }
 }
