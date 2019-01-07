@@ -29,13 +29,14 @@ public class Filter_01_Func implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		request.setCharacterEncoding("utf-8");
-		
+
 		String userName = request.getParameter("userName");
-		String filterName = config.getInitParameter("filterName");
-		
+//		String filterName = config.getInitParameter("filterName");
+
+		String filterName = (String)config.getServletContext().getAttribute("name");
 //		System.out.println("userName = " + userName);
 //		System.out.println("name = " + filterName);
-		
+
 		if (filterName.equals(userName)) {
 			System.out.println("您输入了敏感字！");
 			//输入敏感字。被转发到filter页面了
@@ -54,6 +55,8 @@ public class Filter_01_Func implements Filter {
 	public void init(FilterConfig fConfig) {
 		System.out.println("过滤器初始化函数");
 		config = fConfig;
+		ServletContext servletContext = config.getServletContext();
+		servletContext.setAttribute("name", "gaohank");
 	}
 
 }
