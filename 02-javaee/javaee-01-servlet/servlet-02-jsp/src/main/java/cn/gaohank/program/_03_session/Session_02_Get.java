@@ -1,10 +1,12 @@
 package cn.gaohank.program._03_session;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 /**
  * Servlet implementation class Session_02_Get
@@ -24,19 +26,20 @@ public class Session_02_Get extends HttpServlet {
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void service(HttpServletRequest request, HttpServletResponse response) {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Session_02_Get");
 		
 		HttpSession session = request.getSession();
 		
 		// request取值
-		System.out.println("request取值：" + request.getAttribute("reqName"));
+		System.out.println("request取值：" + request.getAttribute("requestName"));
 		
 		// session取值
 		System.out.println("session的值：" + session.getAttribute("sessionName"));
 		
 		//下面API特点：服务器会把SessionId放在下面这个url的后面
-	    response.encodeRedirectURL("jsp/jsp_03_session.jsp");//encode编码
+		request.getRequestDispatcher("jsp/jsp_03_session.jsp").forward(request, response);
+//	    response.encodeRedirectURL("jsp/jsp_03_session.jsp");//encode编码
 	}
 
 }
