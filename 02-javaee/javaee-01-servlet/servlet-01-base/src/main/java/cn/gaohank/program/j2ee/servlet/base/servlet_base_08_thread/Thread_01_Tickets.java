@@ -22,17 +22,17 @@ public class Thread_01_Tickets extends HttpServlet {
 		@Override
 		public void run() {
 			while (true) {
-//				synchronized (obj) {// 因为count是共享资源，所以对它的操作要加锁
-				if (count > 0) {
-					System.out.println("count = " + count);
-					count--;
-					System.out.println("count = " + count);
-				} else {
-					System.out.println("count = " + count);
-					count++;
-					System.out.println("count = " + count);
+				synchronized (obj) {// 因为count是共享资源，所以对它的操作要加锁
+					if (count > 0) {
+						System.out.println("count = " + count);
+						count--;
+						System.out.println("count = " + count);
+					} else {
+						System.out.println("count = " + count);
+						count++;
+						System.out.println("count = " + count);
+					}
 				}
-//				}
 			}
 		}
 	}
