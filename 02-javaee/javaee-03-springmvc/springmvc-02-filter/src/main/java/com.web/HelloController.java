@@ -44,8 +44,6 @@ public class HelloController implements Serializable {
     @RequestMapping("/hi.do")
     public String hi() {
         System.out.println("hi");
-        String name = "abc";
-        name.charAt(9);
         return "jsp/hello";
     }
     
