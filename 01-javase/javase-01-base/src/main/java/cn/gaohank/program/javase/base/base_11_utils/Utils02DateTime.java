@@ -30,4 +30,8 @@ public class Utils02DateTime {
     public static String getPatternDate(long timestamp, String pattern) {
         return new DateTime(timestamp).toString(DateTimeFormat.forPattern(pattern));
     }
+
+    public static void main(String[] args) {
+        System.out.println(DateTime.parse("2018-10-10 00:12:12", DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")).minusHours(1).toString(DateTimeFormat.forPattern("yyyyMMddHH")));
+    }
 }
