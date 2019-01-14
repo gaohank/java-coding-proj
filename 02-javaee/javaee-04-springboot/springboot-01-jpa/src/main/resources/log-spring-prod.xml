@@ -1,6 +1,6 @@
 <include>
     <!-- 定义日志记录的路径 -->
-    <property name="LOG_DIR" value="/prod/resource-crawler/logs"/>
+    <property name="LOG_DIR" value="d:/prod/resource-crawler/logs"/>
 
     <!-- 定义日志输出格式 -->
     <property name="LOG_PATTERN" value="[%-5p %d] [%t %c{10}] - %m %n"/>
