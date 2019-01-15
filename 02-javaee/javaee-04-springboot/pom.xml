@@ -15,5 +15,6 @@
 
     <modules>
         <module>springboot-01-jpa</module>
+        <module>springboot-02-paoding</module>
     </modules>
 </project>
