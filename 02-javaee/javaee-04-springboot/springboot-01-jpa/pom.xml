@@ -86,6 +86,11 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.45</version>
+        </dependency>
         <!--Swagger2,与Spring MVC程序配合组织 RESTful API文档-->
         <dependency>
             <groupId>io.springfox</groupId>
