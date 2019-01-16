@@ -24,8 +24,8 @@ public class DruidConfig {
         //IP黑名单
         //servletRegistrationBean.addInitParameter("deny","192.168.4.23");
         //控制台用户
-//        servletRegistrationBean.addInitParameter("loginUsername",username);
-//        servletRegistrationBean.addInitParameter("loginPassword",password);
+        servletRegistrationBean.addInitParameter("loginUsername",username);
+        servletRegistrationBean.addInitParameter("loginPassword",password);
         //是否能够重置数据
         servletRegistrationBean.addInitParameter("resetEnable","false");
         return servletRegistrationBean;
