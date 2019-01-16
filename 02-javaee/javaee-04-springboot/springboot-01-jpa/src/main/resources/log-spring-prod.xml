@@ -1,4 +1,4 @@
-<include>
+<included>
     <!-- 定义日志记录的路径 -->
     <property name="LOG_DIR" value="d:/prod/resource-crawler/logs"/>
 
@@ -56,4 +56,4 @@
         <appender-ref ref="async-error"/>
         <appender-ref ref="console"/>
     </root>
-</include>
+</included>

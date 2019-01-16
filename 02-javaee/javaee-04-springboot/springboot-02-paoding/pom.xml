@@ -11,6 +11,26 @@
 
     <artifactId>springboot-02-paoding</artifactId>
 
+    <profiles>
+        <profile>
+            <!-- profile的标示 -->
+            <id>dev</id>
+            <!-- activation用于指定激活条件 -->
+            <activation>
+                <property>
+                    <name>dev</name>
+                    <value>true</value>
+                </property>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!-- properties里面配置具体的值 -->
+            <properties>
+                <rootLogger_level>debug</rootLogger_level>
+                <env_profile>dev</env_profile>
+            </properties>
+        </profile>
+    </profiles>
+
     <!-- 声明依赖，指定版本号 -->
     <dependencyManagement>
         <dependencies>
@@ -26,6 +46,12 @@
 
     <!-- spring-boot的web启动的jar包 -->
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
