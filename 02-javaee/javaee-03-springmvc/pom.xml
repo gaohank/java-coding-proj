@@ -17,6 +17,7 @@
         <module>springmvc-03-aop</module>
         <module>springmvc-04-mybatis</module>
         <module>springmvc-05-paoding</module>
+        <module>springmvc-06-activemq</module>
     </modules>
 
 
