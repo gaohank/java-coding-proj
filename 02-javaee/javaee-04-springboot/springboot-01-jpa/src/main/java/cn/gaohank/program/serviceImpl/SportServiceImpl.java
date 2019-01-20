@@ -14,7 +14,7 @@ public class SportServiceImpl implements SportService {
     private PlayersDao playersDao;
 
     public void logPlayersData(int id) {
-        Players players = playersDao.findOne((long)id);
+        Players players = playersDao.findOne(id);
         System.out.println(players.toString());
     }
 }

@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PlayersDao extends JpaRepository<Players, Long> {
+public interface PlayersDao extends JpaRepository<Players, Integer> {
 }
