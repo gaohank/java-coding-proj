@@ -26,4 +26,10 @@ public class SportController {
         sportService.logPlayersData(id);
         return "info-success";
     }
+
+    @ApiOperation("获得队员名称")
+    @GetMapping("name/{id}")
+    public String getName(@PathVariable("id")int id) {
+        return sportService.getName(id);
+    }
 }
