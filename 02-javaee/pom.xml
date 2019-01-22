@@ -16,6 +16,7 @@
         <module>javaee-02-spring</module>
         <module>javaee-03-springmvc</module>
         <module>javaee-04-springboot</module>
+        <module>javaee-05-paoding</module>
     </modules>
     <packaging>pom</packaging>
     
