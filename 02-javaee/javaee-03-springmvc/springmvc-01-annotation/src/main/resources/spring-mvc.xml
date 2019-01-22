@@ -25,15 +25,19 @@
                   则把这些类注册为spring的bean
      -->
     <context:component-scan base-package="cn.gaohank.program.springmvc.annotation"/>
-    
+
+    <bean name="/hello.do" class = "cn.gaohank.program.springmvc.annotation.HelloController" />
+    <bean name="/hi.do" class = "cn.gaohank.program.springmvc.annotation.HihiController" />
+
     <!--开启MVC注解扫描 -->
     <!-- 配置annotation类型的处理映射器，根据请求查找映射 -->
     <!-- 配置annotation类型的处理适配器，完成对@RequestMapping标注方法的调用 -->
-    <!-- <mvc:annotation-driven/> = 
+    <!-- <mvc:annotation-driven/> =
          DefaultAnnotationHandlerMapping
         +AnnotationMethodHandlerAdapter -->
-    <mvc:annotation-driven/>
-    <!--<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />-->
+    <!--<mvc:annotation-driven/>-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
     
     <!--定义视图解析器ViewResolver -->
     <bean id="viewResolver"
