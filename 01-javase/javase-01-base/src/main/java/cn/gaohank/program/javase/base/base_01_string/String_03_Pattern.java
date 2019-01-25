@@ -21,5 +21,13 @@ public class String_03_Pattern {
             System.out.println(matcher.start());
             System.out.println(matcher.end());
         }
+
+        String name = "（演员）胡歌";
+
+        Pattern compile1 = Pattern.compile("\\(.*\\)|\\（.*\\）");
+        Matcher matcher1 = compile1.matcher(name);
+        if (matcher1.find()) {
+            System.out.println(matcher1.replaceAll(""));
+        }
     }
 }
