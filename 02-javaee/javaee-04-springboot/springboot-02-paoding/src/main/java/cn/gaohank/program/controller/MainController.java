@@ -30,17 +30,18 @@ public class MainController {
         List<SleepMonitor> all = sleepService.findAll();
         List<String> ret = new ArrayList<String>();
         for (SleepMonitor sleepMonitor : all) {
-            ret.add(sleepMonitor.get_id());
+//            ret.add(sleepMonitor.get_id());
         }
         return ret;
     }
 
     @RequestMapping("/all")
+    @ResponseBody
     List<String> all() {
         List<SleepMonitor> all = logService.findAll();
         List<String> ret = new ArrayList<String>();
         for (SleepMonitor sleepMonitor : all) {
-            ret.add(sleepMonitor.get_id());
+            ret.add(sleepMonitor.getSleepStage());
         }
         return ret;
     }
