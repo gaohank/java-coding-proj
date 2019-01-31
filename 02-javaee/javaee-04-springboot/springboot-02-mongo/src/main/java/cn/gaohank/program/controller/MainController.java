@@ -1,5 +1,6 @@
 package cn.gaohank.program.controller;
 
+import cn.gaohank.program.module.SleepMap;
 import cn.gaohank.program.module.SleepMonitor;
 import cn.gaohank.program.service.LogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,17 @@ public class MainController {
         List<String> ret = new ArrayList<String>();
         for (SleepMonitor sleepMonitor : all) {
             ret.add(sleepMonitor.getSleepStage());
+        }
+        return ret;
+    }
+
+    @RequestMapping("/mapids")
+    @ResponseBody
+    List<String> mapIds() {
+        List<SleepMap> mapAll = logService.findMapAll();
+        List<String> ret = new ArrayList<String>();
+        for (SleepMap sleepMap : mapAll) {
+            ret.add(sleepMap.get_id().toString());
         }
         return ret;
     }

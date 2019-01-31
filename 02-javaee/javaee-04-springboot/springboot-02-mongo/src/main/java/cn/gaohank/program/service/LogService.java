@@ -1,5 +1,6 @@
 package cn.gaohank.program.service;
 
+import cn.gaohank.program.module.SleepMap;
 import cn.gaohank.program.module.SleepMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -14,5 +15,9 @@ public class LogService {
 
     public List<SleepMonitor> findAll() {
         return mongoTemplate.findAll(SleepMonitor.class);
+    }
+
+    public List<SleepMap> findMapAll() {
+        return mongoTemplate.findAll(SleepMap.class);
     }
 }
