@@ -15,7 +15,7 @@
 
     <modules>
         <module>springboot-01-jpa</module>
-        <module>springboot-02-paoding</module>
+        <module>springboot-02-mongo</module>
         <module>springboot-03-c3p0</module>
         <module>springboot-04-dubbox</module>
     </modules>
