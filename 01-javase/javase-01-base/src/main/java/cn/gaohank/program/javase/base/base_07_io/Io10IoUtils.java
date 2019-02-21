@@ -34,5 +34,7 @@ public class Io10IoUtils {
 
         System.out.println(getQueries("query.conf",
                 "cn.gaohank.program.javase.base.student.hank.queries"));
+
+        System.out.println(ConfigFactory.load("query.conf").getConfig("cn.gaohank.program.javase.base").root().keySet());
     }
 }
