@@ -29,5 +29,13 @@ public class String_03_Pattern {
         if (matcher1.find()) {
             System.out.println(matcher1.replaceAll(""));
         }
+
+        // ()表示分组
+        String name2 = "mitv 笑傲江湖";
+        Pattern pattern1 = Pattern.compile("(mitv)\\s*(.*)$");
+        Matcher match = pattern1.matcher(name2);
+        if (match.find()) {
+            System.out.println(match.group(1));
+        }
     }
 }
