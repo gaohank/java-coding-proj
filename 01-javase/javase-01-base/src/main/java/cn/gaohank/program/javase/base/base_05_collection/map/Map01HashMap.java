@@ -1,7 +1,6 @@
 package cn.gaohank.program.javase.base.base_05_collection.map;
 
 import java.util.*;
-import java.util.function.Predicate;
 
 /*
  * Map：无序，不重复（key值不能重复），没有Stream流操作
@@ -15,6 +14,11 @@ import java.util.function.Predicate;
  */
 public class Map01HashMap {
     public static void main(String[] args) {
+        Map<String, String> nullMap = new HashMap<>();
+        nullMap.put("name", null);
+        System.out.println(nullMap.get("name"));
+
+
         Map<String, String[]> map = new HashMap<String, String[]>();
 
         // 1.put
